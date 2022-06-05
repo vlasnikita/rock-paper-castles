@@ -1,0 +1,19 @@
+{
+    "Attributes": [
+        {
+            "Value": 0,
+            "Name": "Life",
+            "$type": "CCGKit.IntAttribute"
+        },
+        {
+            "Value": 0,
+            "Name": "Mana",
+            "$type": "CCGKit.IntAttribute"
+        },
+        {
+            "Value": 0,
+            "Name": "Gold",
+            "$type": "CCGKit.IntAttribute"
+        }
+    ]
+}

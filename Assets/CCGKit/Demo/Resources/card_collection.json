@@ -1,0 +1,1119 @@
+[
+    {
+        "Name": "Default",
+        "Cards": [
+            {
+                "Id": 0,
+                "Name": "Grizzly Bear",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Bear"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 1,
+                "Name": "Militia Captain",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Human"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 2,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 2,
+                "Name": "Snake",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Snake"
+                ],
+                "Effects": [
+                    {
+                        "Target": "CurrentOpponent",
+                        "Value": {
+                            "Constant": 1,
+                            "Value": 1,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Deal damage to player",
+                        "Trigger": {
+                            "Attribute": "Defense",
+                            "Type": "WhenCardAttributeDecreases",
+                            "$type": "CCGKit.CardAttributeDecreasedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "When this creature is dealt damage, it deals 1 damage to enemy player.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 3,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 3,
+                "Name": "Angry Goblin",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Goblin"
+                ],
+                "Effects": [
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Fury",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 3,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Fury.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 2,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 3,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 4,
+                "Name": "Dark Vampire",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Rare",
+                "Subtypes": [
+                    "Vampire"
+                ],
+                "Effects": [
+                    {
+                        "Target": "CurrentOpponent",
+                        "Value": {
+                            "Constant": 2,
+                            "Value": 2,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Deal damage to player",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 5,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "When this creature enters the board, it deals 2 damage to enemy player.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 4,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 4,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 5,
+                "Name": "Sacred Wolf",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Rare",
+                "Subtypes": [
+                    "Wolf"
+                ],
+                "Effects": [
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Fury",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    },
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Spell protection",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    },
+                    {
+                        "Target": "CurrentPlayer",
+                        "Value": {
+                            "Constant": 3,
+                            "Value": 3,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Heal player",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 6,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Fury.\n\nWhen this creature enters the board, you gain 3 life.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 5,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 5,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 6,
+                "Name": "Raging Dragon",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Legendary",
+                "Subtypes": [
+                    "Dragon"
+                ],
+                "Effects": [
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Fury",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    },
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Spell protection",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 8,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Fury, spell protection.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 5,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 5,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 7,
+                "Name": "Strength",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "TargetCard",
+                        "Value": {
+                            "Constant": 1,
+                            "Value": 1,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetCard",
+                        "Definition": "Increase creature attack",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.CardEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Add +1/+0 to target creature.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 8,
+                "Name": "Youth Fountain",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "CurrentPlayer",
+                        "Value": {
+                            "Constant": 3,
+                            "Value": 3,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Heal player",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "You gain 3 life.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 9,
+                "Name": "Kill",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "TargetCard",
+                        "Value": null,
+                        "Type": "TargetCard",
+                        "Definition": "Kill creature",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.CardEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 4,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Destroy target creature.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 10,
+                "Name": "Divination",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "CurrentPlayer",
+                        "Value": {
+                            "Constant": 1,
+                            "Value": 1,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Draw cards",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Draw 1 card.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 11,
+                "Name": "Mental Shock",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "TargetPlayer",
+                        "Value": {
+                            "Constant": 1,
+                            "Value": 1,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Discard cards",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Target player discards 1 card.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 12,
+                "Name": "Surprise Attack",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Target": "TargetPlayer",
+                        "Value": {
+                            "Constant": 3,
+                            "Value": 3,
+                            "$type": "CCGKit.ConstantIntValue"
+                        },
+                        "Type": "TargetPlayer",
+                        "Definition": "Deal damage to player",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PlayerEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 2,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Deal 3 damage to target player.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 13,
+                "Name": "Zombie Invasion",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Rare",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Card": "Zombie",
+                        "Type": "General",
+                        "Definition": "Create token",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.GeneralEffect"
+                    },
+                    {
+                        "Card": "Zombie",
+                        "Type": "General",
+                        "Definition": "Create token",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.GeneralEffect"
+                    },
+                    {
+                        "Card": "Zombie",
+                        "Type": "General",
+                        "Definition": "Create token",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.GeneralEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Add three 1/1 Zombie tokens to the board.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 14,
+                "Name": "Turn To Frog",
+                "Definition": "Spell",
+                "MaxCopies": 4,
+                "Rarity": "Rare",
+                "Subtypes": [],
+                "Effects": [
+                    {
+                        "Card": "Frog",
+                        "Target": "TargetCard",
+                        "Value": null,
+                        "Type": "TargetCard",
+                        "Definition": "Transform creature",
+                        "Trigger": {
+                            "Zone": "Board",
+                            "Type": "WhenCardEntersZone",
+                            "$type": "CCGKit.CardEnteredZoneTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.TransformEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Spell",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "Turn target creature into a 1/1 frog.",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 15,
+                "Name": "Zombie",
+                "Definition": "Creature",
+                "MaxCopies": 0,
+                "Rarity": "Unavailable",
+                "Subtypes": [
+                    "Zombie",
+                    "Token"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 0,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 16,
+                "Name": "Frog",
+                "Definition": "Creature",
+                "MaxCopies": 0,
+                "Rarity": "Unavailable",
+                "Subtypes": [
+                    "Frog",
+                    "Token"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 0,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Castle",
+        "Cards": [
+            {
+                "Id": 17,
+                "Name": "Castle Beast",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Bear"
+                ],
+                "Effects": [
+                    {
+                        "Type": "Permanent",
+                        "Definition": "Taunt",
+                        "Trigger": {
+                            "Source": "OwnerPlayer",
+                            "Type": "WhenPlayerTurnStarts",
+                            "$type": "CCGKit.PlayerTurnStartedTrigger"
+                        },
+                        "TriggerConditions": [],
+                        "TargetConditions": [],
+                        "Unavoidable": false,
+                        "$type": "CCGKit.PermanentEffect"
+                    }
+                ],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 5,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 18,
+                "Name": "Castle Warrior",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Human"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 2,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Inferno",
+        "Cards": [
+            {
+                "Id": 19,
+                "Name": "Inferno Bear",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Bear"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 20,
+                "Name": "Inferno Captain",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Human"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 2,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Tower",
+        "Cards": [
+            {
+                "Id": 21,
+                "Name": "Tower Bear",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Bear"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            },
+            {
+                "Id": 22,
+                "Name": "Tower Captain",
+                "Definition": "Creature",
+                "MaxCopies": 4,
+                "Rarity": "Common",
+                "Subtypes": [
+                    "Human"
+                ],
+                "Effects": [],
+                "Attributes": [
+                    {
+                        "Value": 1,
+                        "Name": "Cost",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": "Creature",
+                        "Name": "Image",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": "",
+                        "Name": "Text",
+                        "$type": "CCGKit.StringAttribute"
+                    },
+                    {
+                        "Value": 2,
+                        "Name": "Attack",
+                        "$type": "CCGKit.IntAttribute"
+                    },
+                    {
+                        "Value": 1,
+                        "Name": "Defense",
+                        "$type": "CCGKit.IntAttribute"
+                    }
+                ]
+            }
+        ]
+    }
+]

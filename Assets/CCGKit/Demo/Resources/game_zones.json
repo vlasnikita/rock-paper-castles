@@ -1,0 +1,22 @@
+[
+    {
+        "Name": "Deck",
+        "Private": true,
+        "$type": "CCGKit.StaticGameZone"
+    },
+    {
+        "Name": "Hand",
+        "Private": false,
+        "$type": "CCGKit.StaticGameZone"
+    },
+    {
+        "Name": "Board",
+        "Private": false,
+        "$type": "CCGKit.DynamicGameZone"
+    },
+    {
+        "Name": "Cemetery",
+        "Private": false,
+        "$type": "CCGKit.StaticGameZone"
+    }
+]

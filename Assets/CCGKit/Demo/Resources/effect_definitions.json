@@ -1,0 +1,103 @@
+[
+    {
+        "Name": "Fury",
+        "Type": "Permanent",
+        "$type": "CCGKit.PermanentEffectDefinition"
+    },
+    {
+        "Name": "Spell protection",
+        "Type": "Permanent",
+        "$type": "CCGKit.PermanentEffectDefinition"
+    },
+    {
+        "Action": "IncreaseAttribute",
+        "Attribute": "Life",
+        "AttributeExtra": null,
+        "Name": "Heal player",
+        "Type": "TargetPlayer",
+        "$type": "CCGKit.PlayerEffectDefinition"
+    },
+    {
+        "Action": "DecreaseAttribute",
+        "Attribute": "Life",
+        "AttributeExtra": null,
+        "Name": "Deal damage to player",
+        "Type": "TargetPlayer",
+        "$type": "CCGKit.PlayerEffectDefinition"
+    },
+    {
+        "Action": "MoveCards",
+        "Attribute": "Deck",
+        "AttributeExtra": "Hand",
+        "Name": "Draw cards",
+        "Type": "TargetPlayer",
+        "$type": "CCGKit.PlayerEffectDefinition"
+    },
+    {
+        "Action": "MoveCards",
+        "Attribute": "Hand",
+        "AttributeExtra": "Cemetery",
+        "Name": "Discard cards",
+        "Type": "TargetPlayer",
+        "$type": "CCGKit.PlayerEffectDefinition"
+    },
+    {
+        "Action": "AddCounter",
+        "Card": "Creature",
+        "Attribute": "Defense",
+        "Name": "Heal creature",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Action": "RemoveCounter",
+        "Card": "Creature",
+        "Attribute": "Defense",
+        "Name": "Deal damage to creature",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Action": "AddCounter",
+        "Card": "Creature",
+        "Attribute": "Attack",
+        "Name": "Increase creature attack",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Action": "RemoveCounter",
+        "Card": "Creature",
+        "Attribute": "Attack",
+        "Name": "Decrease creature attack",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Action": "Kill",
+        "Card": "Creature",
+        "Attribute": "Cost",
+        "Name": "Kill creature",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Action": "CreateToken",
+        "Name": "Create token",
+        "Type": "General",
+        "$type": "CCGKit.GeneralEffectDefinition"
+    },
+    {
+        "Action": "Transform",
+        "Card": "Creature",
+        "Attribute": "Cost",
+        "Name": "Transform creature",
+        "Type": "TargetCard",
+        "$type": "CCGKit.CardEffectDefinition"
+    },
+    {
+        "Name": "Taunt",
+        "Type": "Permanent",
+        "$type": "CCGKit.PermanentEffectDefinition"
+    }
+]

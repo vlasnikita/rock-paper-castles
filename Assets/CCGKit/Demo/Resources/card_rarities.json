@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Common",
+        "Chance": 70
+    },
+    {
+        "Name": "Rare",
+        "Chance": 25
+    },
+    {
+        "Name": "Legendary",
+        "Chance": 5
+    },
+    {
+        "Name": "Unavailable",
+        "Chance": 0
+    }
+]

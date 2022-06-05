@@ -1,0 +1,1 @@
+{"Name":"Default deck","Cards":[{"Id":0,"Count":3},{"Id":1,"Count":3},{"Id":2,"Count":2},{"Id":3,"Count":2},{"Id":4,"Count":1},{"Id":5,"Count":1},{"Id":6,"Count":1},{"Id":7,"Count":2},{"Id":8,"Count":1},{"Id":9,"Count":2},{"Id":10,"Count":1},{"Id":11,"Count":1},{"Id":12,"Count":2},{"Id":13,"Count":2},{"Id":14,"Count":2}]}

@@ -1,0 +1,48 @@
+{
+    "NumPlayers": 2,
+    "TurnDuration": 30,
+    "MinDeckSize": 20,
+    "MaxDeckSize": 30,
+    "MaxHandSize": 5,
+    "GameStartActions": [
+        {
+            "Attribute": "Life",
+            "Value": 20,
+            "Name": "Set player attribute",
+            "Target": "AllPlayers",
+            "$type": "CCGKit.SetPlayerAttributeAction"
+        },
+        {
+            "Attribute": "Mana",
+            "Value": 1,
+            "Name": "Set player attribute",
+            "Target": "AllPlayers",
+            "$type": "CCGKit.SetPlayerAttributeAction"
+        },
+        {
+            "Zone": "Deck",
+            "Name": "Shuffle cards",
+            "Target": "AllPlayers",
+            "$type": "CCGKit.ShuffleCardsAction"
+        },
+        {
+            "OriginZone": "Deck",
+            "DestinationZone": "Hand",
+            "NumCards": 5,
+            "Name": "Move cards",
+            "Target": "AllPlayers",
+            "$type": "CCGKit.MoveCardsAction"
+        }
+    ],
+    "TurnStartActions": [
+        {
+            "OriginZone": "Deck",
+            "DestinationZone": "Hand",
+            "NumCards": 1,
+            "Name": "Move cards",
+            "Target": "CurrentPlayer",
+            "$type": "CCGKit.MoveCardsAction"
+        }
+    ],
+    "TurnEndActions": []
+}
